@@ -1,4 +1,7 @@
 # Computer-Graphics-CA
+
+![Monster Truck 3D Graphics CA](https://drive.google.com/file/d/0ByT7HwQZEYCaLTFoTXZKVW1vY0E/view?usp=sharing")
+
 Take Home Assignment for 3rd year Computer Graphics module of 
 Games Design and Development - BSc (Honours) in Computing (Level 8)
 
