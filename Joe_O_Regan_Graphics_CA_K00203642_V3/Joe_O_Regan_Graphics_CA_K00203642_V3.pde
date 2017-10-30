@@ -151,225 +151,41 @@ float[] w4 = {-10.0, 0.0, -2.5, 1.0};   // Triangle shape point
 float[] w5 = {10.0, 0.0, -2.5, 1.0};    // Triangle shape point
 
 // Points for B
-float[][] arrB = {{0.0,-100.0,10.0,1.0},{0.0,-103.0,10.0,1.0},{1.0,-103.0,10.0,1.0},{1.0,-117.0,10.0,1.0},{0.0,-117.0,10.0,1.0},
-                {0.0,-120.0,10.0,1.0},{12.0,-120.0,10.0,1.0},{15.0,-117.0,10.0,1.0},{15.0,-113.0,10.0,1.0},
-                {12.0,-110.0,10.0,1.0},{15.0,-107.0,10.0,1.0},{15.0,-103.0,10.0,1.0},{12.0,-100.0,10.0,1.0},
-                {0.0,-100.0,10.0,1.0}};                                                                                  // Add start point, to go full circle
-float[][] arrBhole1 = {{7.0,-103.0,10.0,1.0},{7.0,-108.0,10.0,1.0},{9.0,-108.0,10.0,1.0},{9.0,-103.0,10.0,1.0},{7.0,-103.0,10.0,1.0}};
-float[][] arrBhole2 = {{7.0,-112.0,10.0,1.0},{7.0,-117.0,10.0,1.0},{9.0,-117.0,10.0,1.0},{9.0,-112.0,10.0,1.0},{7.0,-112.0,10.0,1.0}};
+float[][] arrB = {{0.0,-100.0,0.0,1.0},{0.0,-103.0,0.0,1.0},{1.0,-103.0,0.0,1.0},{1.0,-117.0,0.0,1.0},{0.0,-117.0,0.0,1.0},
+                {0.0,-120.0,0.0,1.0},{12.0,-120.0,0.0,1.0},{15.0,-117.0,0.0,1.0},{15.0,-113.0,0.0,1.0},
+                {12.0,-110.0,0.0,1.0},{15.0,-107.0,0.0,1.0},{15.0,-103.0,0.0,1.0},{12.0,-100.0,0.0,1.0},
+                {0.0,-100.0,0.0,1.0}};                                                                                  // Add start point, to go full circle
+float[][] arrBhole1 = {{7.0,-103.0,0.0,1.0},{7.0,-108.0,0.0,1.0},{9.0,-108.0,0.0,1.0},{9.0,-103.0,0.0,1.0},{7.0,-103.0,0.0,1.0}};
+float[][] arrBhole2 = {{7.0,-112.0,0.0,1.0},{7.0,-117.0,0.0,1.0},{9.0,-117.0,0.0,1.0},{9.0,-112.0,0.0,1.0},{7.0,-112.0,0.0,1.0}};
 
-  //tb1 = transform_point(m, tb1);
-  /*
-  for (int i = 0; i < 12; i++){
-     arrB[i] = transform_point(m, arrB[i]);
-     if (i < 4) {
-       arrBhole1[i] = transform_point(m, arrBhole1[i]);
-       arrBhole2[i] = transform_point(m, arrBhole2[i]);
-     } else continue;
-  }
-  */
-
-
-float[] tb1 = {0.0,-100.0,10.0,1.0};  // Front
-float[] tb2 = {0.0,-103.0,10.0,1.0};
-float[] tb3 = {1.0,-103.0,10.0,1.0};
-float[] tb4 = {1.0,-117.0,10.0,1.0};
-float[] tb5 = {0.0,-117.0,10.0,1.0};
-float[] tb6 = {0.0,-120.0,10.0,1.0};
-float[] tb7 = {12.0,-120.0,10.0,1.0};
-float[] tb8 = {15.0,-117.0,10.0,1.0};
-float[] tb9 = {15.0,-113.0,10.0,1.0};
-float[] tb10 = {12.0,-110.0,10.0,1.0};
-float[] tb11 = {15.0,-107.0,10.0,1.0};
-float[] tb12 = {15.0,-103.0,10.0,1.0};
-float[] tb13 = {12.0,-100.0,10.0,1.0};
-float[] tb14 = {7.0,-103.0,10.0,1.0}; // Bottom Centre
-float[] tb15 = {7.0,-108.0,10.0,1.0};
-float[] tb16 = {9.0,-108.0,10.0,1.0};
-float[] tb17 = {9.0,-103.0,10.0,1.0}; // Top Centre
-float[] tb18 = {7.0,-112.0,10.0,1.0};
-float[] tb19 = {7.0,-117.0,10.0,1.0}; 
-float[] tb20 = {9.0,-117.0,10.0,1.0}; 
-float[] tb21 = {9.0,-112.0,10.0,1.0};
-
-float[] txb1 = {0.0,-100.0,0.0,1.0};  // Back
-float[] txb2 = {0.0,-103.0,0.0,1.0};
-float[] txb3 = {1.0,-103.0,0.0,1.0};
-float[] txb4 = {1.0,-117.0,0.0,1.0};
-float[] txb5 = {0.0,-117.0,0.0,1.0};
-float[] txb6 = {0.0,-120.0,0.0,1.0};
-float[] txb7 = {12.0,-120.0,0.0,1.0};
-float[] txb8 = {15.0,-117.0,0.0,1.0};
-float[] txb9 = {15.0,-113.0,0.0,1.0};
-float[] txb10 = {12.0,-110.0,0.0,1.0};
-float[] txb11 = {15.0,-107.0,0.0,1.0};
-float[] txb12 = {15.0,-103.0,0.0,1.0};
-float[] txb13 = {12.0,-100.0,0.0,1.0};
-float[] txb14 = {7.0,-103.0,0.0,1.0}; // Bottom Centre
-float[] txb15 = {7.0,-108.0,0.0,1.0};
-float[] txb16 = {9.0,-108.0,0.0,1.0};
-float[] txb17 = {9.0,-103.0,0.0,1.0};
-float[] txb18 = {7.0,-112.0,0.0,1.0}; // Top Centre
-float[] txb19 = {7.0,-117.0,0.0,1.0}; 
-float[] txb20 = {9.0,-117.0,0.0,1.0}; 
-float[] txb21 = {9.0,-112.0,0.0,1.0};
 
 // Points for I
-float[] ti1 = {16.0,-100.0,10.0,1.0};
-float[] ti2 = {16.0,-103.0,10.0,1.0};
-float[] ti3 = {17.0,-103.0,10.0,1.0};
-float[] ti4 = {17.0,-117.0,10.0,1.0};
-float[] ti5 = {16.0,-117.0,10.0,1.0};
-float[] ti6 = {16.0,-120.0,10.0,1.0};
-float[] ti7 = {24.0,-120.0,10.0,1.0};
-float[] ti8 = {24.0,-117.0,10.0,1.0};
-float[] ti9 = {23.0,-117.0,10.0,1.0};
-float[] ti10 = {23.0,-103.0,10.0,1.0};
-float[] ti11 = {24.0,-103.0,10.0,1.0};
-float[] ti12 = {24.0,0.-100,10.0,1.0};
-
-float[] txi1 = {16.0,-100.0,0.0,1.0};
-float[] txi2 = {16.0,-103.0,0.0,1.0};
-float[] txi3 = {17.0,-103.0,0.0,1.0};
-float[] txi4 = {17.0,-117.0,0.0,1.0};
-float[] txi5 = {16.0,-117.0,0.0,1.0};
-float[] txi6 = {16.0,-120.0,0.0,1.0};
-float[] txi7 = {24.0,-120.0,0.0,1.0};
-float[] txi8 = {24.0,-117.0,0.0,1.0};
-float[] txi9 = {23.0,-117.0,0.0,1.0};
-float[] txi10 = {23.0,-103.0,0.0,1.0};
-float[] txi11 = {24.0,-103.0,0.0,1.0};
-float[] txi12 = {24.0,0.-100,0.0,1.0};
+float[][] arrI = {{16.0,-100.0,0.0,1.0},{16.0,-103.0,0.0,1.0},{17.0,-103.0,0.0,1.0},{17.0,-117.0,0.0,1.0},
+                {16.0,-117.0,0.0,1.0},{16.0,-120.0,0.0,1.0},{24.0,-120.0,0.0,1.0},{24.0,-117.0,0.0,1.0},
+                {23.0,-117.0,0.0,1.0},{23.0,-103.0,0.0,1.0},{24.0,-103.0,0.0,1.0},{24.0,0.-100,0.0,1.0},{16.0,-100.0,0.0,1.0}};
 
 // Points for G
-float[] tg1 = {28.0,-100.0,10.0,1.0};
-float[] tg2 = {25.0,-103.0,10.0,1.0};
-float[] tg3 = {25.0,-117.0,10.0,1.0};
-float[] tg4 = {28.0,-120.0,10.0,1.0};
-float[] tg5 = {39.0,-120.0,10.0,1.0};
-float[] tg6 = {39.0,-111.0,10.0,1.0};
-float[] tg7 = {33.0,-111.0,10.0,1.0};
-float[] tg8 = {33.0,-115.0,10.0,1.0};
-float[] tg9 = {31.0,-115.0,10.0,1.0};
-float[] tg10 = {31.0,-105.0,10.0,1.0};
-float[] tg11 = {33.0,-105.0,10.0,1.0};
-float[] tg12 = {33.0,-109.0,10.0,1.0};
-float[] tg13 = {40.0,-109.0,10.0,1.0};
-float[] tg14 = {40.0,-106.0,10.0,1.0};
-float[] tg15 = {39.0,-106.0,10.0,1.0};
-float[] tg16 = {39.0,-103.0,10.0,1.0};
-float[] tg17 = {36.0,-100.0,10.0,1.0};
 
-float[] txg1 = {28.0,-100.0,0.0,1.0};
-float[] txg2 = {25.0,-103.0,0.0,1.0};
-float[] txg3 = {25.0,-117.0,0.0,1.0};
-float[] txg4 = {28.0,-120.0,0.0,1.0};
-float[] txg5 = {39.0,-120.0,0.0,1.0};
-float[] txg6 = {39.0,-111.0,0.0,1.0};
-float[] txg7 = {33.0,-111.0,0.0,1.0};
-float[] txg8 = {33.0,-115.0,0.0,1.0};
-float[] txg9 = {31.0,-115.0,0.0,1.0};
-float[] txg10 = {31.0,-105.0,0.0,1.0};
-float[] txg11 = {33.0,-105.0,0.0,1.0};
-float[] txg12 = {33.0,-109.0,0.0,1.0};
-float[] txg13 = {40.0,-109.0,0.0,1.0};
-float[] txg14 = {40.0,-106.0,0.0,1.0};
-float[] txg15 = {39.0,-106.0,0.0,1.0};
-float[] txg16 = {39.0,-103.0,0.0,1.0};
-float[] txg17 = {36.0,-100.0,0.0,1.0};
+float[][] arrG = {{28.0,-100.0,0.0,1.0},{25.0,-103.0,0.0,1.0},{25.0,-117.0,0.0,1.0},{28.0,-120.0,0.0,1.0},{39.0,-120.0,0.0,1.0},
+                {39.0,-111.0,0.0,1.0},{33.0,-111.0,0.0,1.0},{33.0,-115.0,0.0,1.0},{31.0,-115.0,0.0,1.0},{31.0,-105.0,0.0,1.0},
+                {33.0,-105.0,0.0,1.0},{33.0,-109.0,0.0,1.0},{40.0,-109.0,0.0,1.0},{40.0,-106.0,0.0,1.0},{39.0,-106.0,0.0,1.0},
+                {39.0,-103.0,0.0,1.0},{36.0,-100.0,0.0,1.0},{28.0,-100.0,0.0,1.0}};
 
 // Points for F
-float[] tf1 = {40.0,-100.0,10.0,1.0};
-float[] tf2 = {40.0,-103.0,10.0,1.0};
-float[] tf3 = {41.0,-103.0,10.0,1.0};
-float[] tf4 = {41.0,-117.0,10.0,1.0};
-float[] tf5 = {40.0,-117.0,10.0,1.0};
-float[] tf6 = {40.0,-120.0,10.0,1.0};
-float[] tf7 = {54.0,-120.0,10.0,1.0};
-float[] tf8 = {54.0,-116.0,10.0,1.0};
-float[] tf9 = {50.0,-116.0,10.0,1.0};
-float[] tf10 = {50.0,-115.0,10.0,1.0};
-float[] tf11 = {47.0,-115.0,10.0,1.0};
-float[] tf12 = {47.0,-112.0,10.0,1.0};
-float[] tf13 = {50.0,-112.0,10.0,1.0};
-float[] tf14 = {50.0,-108.0,10.0,1.0};
-float[] tf15 = {47.0,-108.0,10.0,1.0};
-float[] tf16 = {47.0,-103.0,10.0,1.0};
-float[] tf17 = {48.0,-103.0,10.0,1.0};
-float[] tf18 = {48.0,-100.0,10.0,1.0};
-
-float[] txf1 = {40.0,-100.0,0.0,1.0};
-float[] txf2 = {40.0,-103.0,0.0,1.0};
-float[] txf3 = {41.0,-103.0,0.0,1.0};
-float[] txf4 = {41.0,-117.0,0.0,1.0};
-float[] txf5 = {40.0,-117.0,0.0,1.0};
-float[] txf6 = {40.0,-120.0,0.0,1.0};
-float[] txf7 = {54.0,-120.0,0.0,1.0};
-float[] txf8 = {54.0,-116.0,0.0,1.0};
-float[] txf9 = {50.0,-116.0,0.0,1.0};
-float[] txf10 = {50.0,-115.0,0.0,1.0};
-float[] txf11 = {47.0,-115.0,0.0,1.0};
-float[] txf12 = {47.0,-112.0,0.0,1.0};
-float[] txf13 = {50.0,-112.0,0.0,1.0};
-float[] txf14 = {50.0,-108.0,0.0,1.0};
-float[] txf15 = {47.0,-108.0,0.0,1.0};
-float[] txf16 = {47.0,-103.0,0.0,1.0};
-float[] txf17 = {48.0,-103.0,0.0,1.0};
-float[] txf18 = {48.0,-100.0,0.0,1.0};
+float[][] arrF = {{40.0,-100.0,0.0,1.0},{40.0,-103.0,0.0,1.0},{41.0,-103.0,0.0,1.0},{41.0,-117.0,0.0,1.0},{40.0,-117.0,0.0,1.0},
+                {40.0,-120.0,0.0,1.0},{54.0,-120.0,0.0,1.0},{54.0,-116.0,0.0,1.0},{50.0,-116.0,0.0,1.0},{50.0,-115.0,0.0,1.0},
+                {47.0,-115.0,0.0,1.0},{47.0,-112.0,0.0,1.0},{50.0,-112.0,0.0,1.0},{50.0,-108.0,0.0,1.0},{47.0,-108.0,0.0,1.0},
+                {47.0,-103.0,0.0,1.0},{48.0,-103.0,0.0,1.0},{48.0,-100.0,0.0,1.0},{40.0,-100.0,0.0,1.0}};
 
 // Points for O
-float[] to1 = {58.0,-100.0,10.0,1.0};  // Bottom left Front
-float[] to2 = {55.0,-103.0,10.0,1.0};
-float[] to3 = {55.0,-117.0,10.0,1.0};
-float[] to4 = {58.0,-120.0,10.0,1.0};
-float[] to5 = {66.0,-120.0,10.0,1.0};
-float[] to6 = {69.0,-117.0,10.0,1.0};
-float[] to7 = {69.0,-103.0,10.0,1.0};
-float[] to8 = {66.0,-100.0,10.0,1.0};
-float[] to9 = {61.0,-105.0,10.0,1.0};  // Centre
-float[] to10 = {61.0,-115.0,10.0,1.0};
-float[] to11 = {63.0,-115.0,10.0,1.0};
-float[] to12 = {63.0,-105.0,10.0,1.0};
-
-float[] txo1 = {58.0,-100.0,0.0,1.0};  // Bottom left Back
-float[] txo2 = {55.0,-103.0,0.0,1.0};
-float[] txo3 = {55.0,-117.0,0.0,1.0};
-float[] txo4 = {58.0,-120.0,0.0,1.0};
-float[] txo5 = {66.0,-120.0,0.0,1.0};
-float[] txo6 = {69.0,-117.0,0.0,1.0};
-float[] txo7 = {69.0,-103.0,0.0,1.0};
-float[] txo8 = {66.0,-100.0,0.0,1.0};
-float[] txo9 = {61.0,-105.0,0.0,1.0};  // Centre
-float[] txo10 = {61.0,-115.0,0.0,1.0};
-float[] txo11 = {63.0,-115.0,0.0,1.0};
-float[] txo12 = {63.0,-105.0,0.0,1.0};
+float[][] arrO = {{58.0,-100.0,0.0,1.0},{55.0,-103.0,0.0,1.0},{55.0,-117.0,0.0,1.0},{58.0,-120.0,0.0,1.0},{66.0,-120.0,0.0,1.0},
+                {69.0,-117.0,0.0,1.0},{69.0,-103.0,0.0,1.0},{66.0,-100.0,0.0,1.0},{58.0,-100.0,0.0,1.0}};
+float[][] arrOhole = {{61.0,-105.0,0.0,1.0},{61.0,-115.0,0.0,1.0},{63.0,-115.0,0.0,1.0},{63.0,-105.0,0.0,1.0},{61.0,-105.0,0.0,1.0}};
 
 // Points for T
-float[] tt1 = {87.0,-100.0,10.0,1.0};
-float[] tt2 = {87.0,-103.0,10.0,1.0};
-float[] tt3 = {88.0,-103.0,10.0,1.0};
-float[] tt4 = {88.0,-117.0,10.0,1.0};
-float[] tt5 = {83.0,-117.0,10.0,1.0};
-float[] tt6 = {83.0,-120.0,10.0,1.0};
-float[] tt7 = {98.0,-120.0,10.0,1.0};
-float[] tt8 = {98.0,-117.0,10.0,1.0};
-float[] tt9 = {94.0,-117.0,10.0,1.0};
-float[] tt10 = {94.0,-103.0,10.0,1.0};
-float[] tt11 = {95.0,-103.0,10.0,1.0};
-float[] tt12 = {95.0,0.-100,10.0,1.0};
-
-float[] txt1 = {87.0,-100.0,0.0,1.0};
-float[] txt2 = {87.0,-103.0,0.0,1.0};
-float[] txt3 = {88.0,-103.0,0.0,1.0};
-float[] txt4 = {88.0,-117.0,0.0,1.0};
-float[] txt5 = {83.0,-117.0,0.0,1.0};
-float[] txt6 = {83.0,-120.0,0.0,1.0};
-float[] txt7 = {98.0,-120.0,0.0,1.0};
-float[] txt8 = {98.0,-117.0,0.0,1.0};
-float[] txt9 = {94.0,-117.0,0.0,1.0};
-float[] txt10 = {94.0,-103.0,0.0,1.0};
-float[] txt11 = {95.0,-103.0,0.0,1.0};
-float[] txt12 = {95.0,0.-100,0.0,1.0};
+float[][] arrT = {{87.0,-100.0,0.0,1.0},{87.0,-103.0,0.0,1.0},{88.0,-103.0,0.0,1.0},{88.0,-117.0,0.0,1.0},{83.0,-117.0,0.0,1.0},
+                {83.0,-120.0,0.0,1.0},{98.0,-120.0,0.0,1.0},{98.0,-117.0,0.0,1.0},{94.0,-117.0,0.0,1.0},{94.0,-103.0,0.0,1.0},
+                {95.0,-103.0,0.0,1.0},{95.0,0.-100,0.0,1.0},{87.0,-100.0,0.0,1.0}};
 
 // Car body - Right side (Driver side)
 float[] cr1 = {10.0,0.0,8.0,1.0};    // back bumper
@@ -502,209 +318,35 @@ void applyTransform(){
        arrBhole2[i] = transform_point(m, arrBhole2[i]);
      } else continue;
   }
-    
-  /*
-  tb1 = transform_point(m, tb1);
-  tb2 = transform_point(m, tb2);
-  tb3 = transform_point(m, tb3);
-  tb4 = transform_point(m, tb4);  
-  tb5 = transform_point(m, tb5);  
-  tb6 = transform_point(m, tb6);  
-  tb7 = transform_point(m, tb7);  
-  tb8 = transform_point(m, tb8);  
-  tb9 = transform_point(m, tb9);  
-  tb10 = transform_point(m, tb10);  
-  tb11 = transform_point(m, tb11);  
-  tb12 = transform_point(m, tb12);  
-  tb13 = transform_point(m, tb13);
-  tb14 = transform_point(m, tb14);   
-  tb15 = transform_point(m, tb15);   
-  tb16 = transform_point(m, tb16);   
-  tb17 = transform_point(m, tb17);   
-  tb18 = transform_point(m, tb18);   
-  tb19 = transform_point(m, tb19);   
-  tb20 = transform_point(m, tb20);   
-  tb21 = transform_point(m, tb21);    
-  
-  txb1 = transform_point(m, txb1);
-  txb2 = transform_point(m, txb2);
-  txb3 = transform_point(m, txb3);
-  txb4 = transform_point(m, txb4);  
-  txb5 = transform_point(m, txb5);  
-  txb6 = transform_point(m, txb6);  
-  txb7 = transform_point(m, txb7);  
-  txb8 = transform_point(m, txb8);  
-  txb9 = transform_point(m, txb9);  
-  txb10 = transform_point(m, txb10);  
-  txb11 = transform_point(m, txb11);  
-  txb12 = transform_point(m, txb12);  
-  txb13 = transform_point(m, txb13);  
-  txb14 = transform_point(m, txb14);   
-  txb15 = transform_point(m, txb15);   
-  txb16 = transform_point(m, txb16);   
-  txb17 = transform_point(m, txb17);   
-  txb18 = transform_point(m, txb18);   
-  txb19 = transform_point(m, txb19);   
-  txb20 = transform_point(m, txb20);   
-  txb21 = transform_point(m, txb21); 
-  */
-  
+      
   // I Scale
-  ti1 = transform_point(m, ti1);
-  ti2 = transform_point(m, ti2);
-  ti3 = transform_point(m, ti3);
-  ti4 = transform_point(m, ti4);  
-  ti5 = transform_point(m, ti5);  
-  ti6 = transform_point(m, ti6);  
-  ti7 = transform_point(m, ti7);  
-  ti8 = transform_point(m, ti8);  
-  ti9 = transform_point(m, ti9);  
-  ti10 = transform_point(m, ti10);  
-  ti11 = transform_point(m, ti11);  
-  ti12 = transform_point(m, ti12);  
+  for (int i = 0; i < 13; i++){
+     arrI[i] = transform_point(m, arrI[i]);
+  }
   
-  txi1 = transform_point(m, txi1);
-  txi2 = transform_point(m, txi2);
-  txi3 = transform_point(m, txi3);
-  txi4 = transform_point(m, txi4);  
-  txi5 = transform_point(m, txi5);  
-  txi6 = transform_point(m, txi6);  
-  txi7 = transform_point(m, txi7);  
-  txi8 = transform_point(m, txi8);  
-  txi9 = transform_point(m, txi9);  
-  txi10 = transform_point(m, txi10);  
-  txi11 = transform_point(m, txi11);  
-  txi12 = transform_point(m, txi12);  
-  
-  // G Scale
-  tg1 = transform_point(m, tg1);
-  tg2 = transform_point(m, tg2);
-  tg3 = transform_point(m, tg3);
-  tg4 = transform_point(m, tg4);  
-  tg5 = transform_point(m, tg5);  
-  tg6 = transform_point(m, tg6);  
-  tg7 = transform_point(m, tg7);  
-  tg8 = transform_point(m, tg8);  
-  tg9 = transform_point(m, tg9);  
-  tg10 = transform_point(m, tg10);  
-  tg11 = transform_point(m, tg11);  
-  tg12 = transform_point(m, tg12);   
-  tg13 = transform_point(m, tg13);  
-  tg14 = transform_point(m, tg14);   
-  tg15 = transform_point(m, tg15);   
-  tg16 = transform_point(m, tg16);   
-  tg17 = transform_point(m, tg17);  
-  
-  txg1 = transform_point(m, txg1);
-  txg2 = transform_point(m, txg2);
-  txg3 = transform_point(m, txg3);
-  txg4 = transform_point(m, txg4);  
-  txg5 = transform_point(m, txg5);  
-  txg6 = transform_point(m, txg6);  
-  txg7 = transform_point(m, txg7);  
-  txg8 = transform_point(m, txg8);  
-  txg9 = transform_point(m, txg9);  
-  txg10 = transform_point(m, txg10);  
-  txg11 = transform_point(m, txg11);  
-  txg12 = transform_point(m, txg12);   
-  txg13 = transform_point(m, txg13);  
-  txg14 = transform_point(m, txg14);   
-  txg15 = transform_point(m, txg15);   
-  txg16 = transform_point(m, txg16);   
-  txg17 = transform_point(m, txg17);  
+  // G Scale 
+  // I Scale
+  for (int i = 0; i < 18; i++){
+     arrG[i] = transform_point(m, arrG[i]);
+  }
   
   // Move F left and right  
-  tf1 = transform_point(n, tf1);
-  tf2 = transform_point(n, tf2);
-  tf3 = transform_point(n, tf3);
-  tf4 = transform_point(n, tf4);  
-  tf5 = transform_point(n, tf5);  
-  tf6 = transform_point(n, tf6);  
-  tf7 = transform_point(n, tf7);  
-  tf8 = transform_point(n, tf8);  
-  tf9 = transform_point(n, tf9);  
-  tf10 = transform_point(n, tf10);  
-  tf11 = transform_point(n, tf11);  
-  tf12 = transform_point(n, tf12);   
-  tf13 = transform_point(n, tf13);  
-  tf14 = transform_point(n, tf14);   
-  tf15 = transform_point(n, tf15);   
-  tf16 = transform_point(n, tf16);   
-  tf17 = transform_point(n, tf17);   
-  tf18 = transform_point(n, tf18);  
-  
-  txf1 = transform_point(n, txf1);
-  txf2 = transform_point(n, txf2);
-  txf3 = transform_point(n, txf3);
-  txf4 = transform_point(n, txf4);  
-  txf5 = transform_point(n, txf5);  
-  txf6 = transform_point(n, txf6);  
-  txf7 = transform_point(n, txf7);  
-  txf8 = transform_point(n, txf8);  
-  txf9 = transform_point(n, txf9);  
-  txf10 = transform_point(n, txf10);  
-  txf11 = transform_point(n, txf11);  
-  txf12 = transform_point(n, txf12);   
-  txf13 = transform_point(n, txf13);  
-  txf14 = transform_point(n, txf14);   
-  txf15 = transform_point(n, txf15);   
-  txf16 = transform_point(n, txf16);   
-  txf17 = transform_point(n, txf17);   
-  txf18 = transform_point(n, txf18);  
+  for (int i = 0; i < 19; i++){
+     arrF[i] = transform_point(n, arrF[i]);            // Transform by matrix n, to move left and right
+  }
   
   // Move O left and right
-  to1 = transform_point(n, to1);
-  to2 = transform_point(n, to2);
-  to3 = transform_point(n, to3);
-  to4 = transform_point(n, to4);
-  to5 = transform_point(n, to5);
-  to6 = transform_point(n, to6);
-  to7 = transform_point(n, to7);
-  to8 = transform_point(n, to8);
-  to9 = transform_point(n, to9);
-  to10 = transform_point(n, to10);
-  to11 = transform_point(n, to11);
-  to12 = transform_point(n, to12);
-  
-  txo1 = transform_point(n, txo1);
-  txo2 = transform_point(n, txo2);
-  txo3 = transform_point(n, txo3);
-  txo4 = transform_point(n, txo4);
-  txo5 = transform_point(n, txo5);
-  txo6 = transform_point(n, txo6);
-  txo7 = transform_point(n, txo7);
-  txo8 = transform_point(n, txo8);
-  txo9 = transform_point(n, txo9);
-  txo10 = transform_point(n, txo10);
-  txo11 = transform_point(n, txo11);
-  txo12 = transform_point(n, txo12);
+  for (int i = 0; i < 9; i++){
+     arrO[i] = transform_point(n, arrO[i]);            // Transform by matrix n, to move left and right
+     if (i < 5) {
+       arrOhole[i] = transform_point(n, arrOhole[i]);  // Draw the hole in the O
+     } else continue;
+  }
   
   // Move T left and right
-  tt1 = transform_point(n, tt1);
-  tt2 = transform_point(n, tt2);
-  tt3 = transform_point(n, tt3);
-  tt4 = transform_point(n, tt4);
-  tt5 = transform_point(n, tt5);
-  tt6 = transform_point(n, tt6);
-  tt7 = transform_point(n, tt7);
-  tt8 = transform_point(n, tt8);
-  tt9 = transform_point(n, tt9);
-  tt10 = transform_point(n, tt10);
-  tt11 = transform_point(n, tt11);
-  tt12 = transform_point(n, tt12);
-  
-  txt1 = transform_point(n, txt1);
-  txt2 = transform_point(n, txt2);
-  txt3 = transform_point(n, txt3);
-  txt4 = transform_point(n, txt4);
-  txt5 = transform_point(n, txt5);
-  txt6 = transform_point(n, txt6);
-  txt7 = transform_point(n, txt7);
-  txt8 = transform_point(n, txt8);
-  txt9 = transform_point(n, txt9);
-  txt10 = transform_point(n, txt10);
-  txt11 = transform_point(n, txt11);
-  txt12 = transform_point(n, txt12);
+  for (int i = 0; i < 13; i++){
+     arrT[i] = transform_point(n, arrT[i]);            // Transform by matrix n, to move left and right
+  }
   
   w1 = transform_point(o, w1);
   w2 = transform_point(o, w2);
@@ -897,356 +539,83 @@ void mouseWheel(MouseEvent event) {
    screen and, the word BIG is scaled up and down, and the word FOOT is translated 
    left to right
 */
-void drawB() {                                              // Draw The Letter 'B'
-  stroke(0, 0, 255);                                        // Blue
-  
-  for (int i = 0; i < 13; i++) {
+void drawB() {                                                                                        // Draw The Letter 'B'
+  for (int i = 0; i < 13; i++) {                                                                      // Draw The Letter 'B'
+      stroke(0, 0, 255);                                                                              // Blue
       line(arrB[i][0],arrB[i][1],arrB[i][2], arrB[i+1][0],arrB[i+1][1],arrB[i+1][2]);                 // Draw B Front outline
-      line(arrB[i][0],arrB[i][1],arrB[i][2] - 10.0f, arrB[i+1][0],arrB[i+1][1],arrB[i+1][2] - 10.0f); // Draw B Back outline
-  stroke(50, 50, 255);                                      // Light blue
-      line(arrB[i][0],arrB[i][1],arrB[i][2], arrB[i][0],arrB[i][1],arrB[i][2] - 10);                  // Draw B Sides
-  //stroke(0, 0, 255);                                        // Blue
+      line(arrB[i][0],arrB[i][1],arrB[i][2] + 10.0f, arrB[i+1][0],arrB[i+1][1],arrB[i+1][2] + 10.0f); // Draw B Back outline
+      stroke(50, 50, 255);                                                                            // Light blue
+      line(arrB[i][0],arrB[i][1],arrB[i][2], arrB[i][0],arrB[i][1],arrB[i][2] + 10.0f);               // Draw B Sides
       
       if (i < 4) {
-  //stroke(50, 50, 255);                                      // Light blue
-        line(arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2], arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2] - 10);                   // Draw B hole 1 Side
-        line(arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2], arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2] - 10);                   // Draw B hole 2 Side
-  stroke(0, 0, 255);                                        // Blue
+        line(arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2], arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2] + 10.0f);                // Draw B hole 1 Side
+        line(arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2], arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2] + 10.0f);                // Draw B hole 2 Side
+        stroke(0, 0, 255);                                        // Blue
         line(arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2], arrBhole1[i+1][0],arrBhole1[i+1][1],arrBhole1[i+1][2]);                  // Draw B hole 1 front
         line(arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2], arrBhole2[i+1][0],arrBhole2[i+1][1],arrBhole2[i+1][2]);                  // Draw B hole 2 front
-        line(arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2] - 10.0f, arrBhole1[i+1][0],arrBhole1[i+1][1],arrBhole1[i+1][2] - 10.0f);  // Draw B hole 1 back
-        line(arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2] - 10.0f, arrBhole2[i+1][0],arrBhole2[i+1][1],arrBhole2[i+1][2] - 10.0f);  // Draw B hole 2 back
+        line(arrBhole1[i][0],arrBhole1[i][1],arrBhole1[i][2] + 10.0f, arrBhole1[i+1][0],arrBhole1[i+1][1],arrBhole1[i+1][2] + 10.0f);  // Draw B hole 1 back
+        line(arrBhole2[i][0],arrBhole2[i][1],arrBhole2[i][2] + 10.0f, arrBhole2[i+1][0],arrBhole2[i+1][1],arrBhole2[i+1][2] + 10.0f);  // Draw B hole 2 back
       } 
       else continue;
   }
-      //line(arrB[11][0],arrB[11][1],arrB[11][2], arrB[0][0],arrB[0][1],arrB[0][2]);        // Draw B outline
-      //line(arrBhole1[3][0],arrBhole1[3][1],arrBhole1[3][2], arrBhole1[0][0],arrBhole1[0][1],arrBhole1[0][2]);  // Draw B hole
-      //line(arrBhole2[3][0],arrBhole2[3][1],arrBhole2[3][2], arrBhole2[0][0],arrBhole2[0][1],arrBhole2[0][2]);  // Draw B hole
-  
-/*  
-  line(tb1[0],tb1[1],tb1[2], tb2[0],tb2[1],tb2[2]);
-  line(tb2[0],tb2[1],tb2[2], tb3[0],tb3[1],tb3[2]);
-  line(tb3[0],tb3[1],tb3[2], tb4[0],tb4[1],tb4[2]);
-  line(tb4[0],tb4[1],tb4[2], tb5[0],tb5[1],tb5[2]);
-  line(tb5[0],tb5[1],tb5[2], tb6[0],tb6[1],tb6[2]);
-  line(tb6[0],tb6[1],tb6[2], tb7[0],tb7[1],tb7[2]);
-  line(tb7[0],tb7[1],tb7[2], tb8[0],tb8[1],tb8[2]);
-  line(tb8[0],tb8[1],tb8[2], tb9[0],tb9[1],tb9[2]);
-  line(tb9[0],tb9[1],tb9[2], tb10[0],tb10[1],tb10[2]);
-  line(tb10[0],tb10[1],tb10[2], tb11[0],tb11[1],tb11[2]);
-  line(tb11[0],tb11[1],tb11[2], tb12[0],tb12[1],tb12[2]);
-  line(tb12[0],tb12[1],tb12[2], tb13[0],tb13[1],tb13[2]);
-  line(tb13[0],tb13[1],tb13[2], tb1[0],tb1[1],tb1[2]);
-  
-  line(tb14[0],tb14[1],tb14[2], tb15[0],tb15[1],tb15[2]);
-  line(tb15[0],tb15[1],tb15[2], tb16[0],tb16[1],tb16[2]);
-  line(tb16[0],tb16[1],tb16[2], tb17[0],tb17[1],tb17[2]);
-  line(tb17[0],tb17[1],tb17[2], tb14[0],tb14[1],tb14[2]);  
-  line(tb18[0],tb18[1],tb18[2], tb19[0],tb19[1],tb19[2]);
-  line(tb19[0],tb19[1],tb19[2], tb20[0],tb20[1],tb20[2]);
-  line(tb20[0],tb20[1],tb20[2], tb21[0],tb21[1],tb21[2]);
-  line(tb21[0],tb21[1],tb21[2], tb18[0],tb18[1],tb18[2]);
-  
-  stroke(50, 50, 255);                                      // Light blue
-  line(txb1[0],txb1[1],txb1[2], txb2[0],txb2[1],txb2[2]);
-  line(txb2[0],txb2[1],txb2[2], txb3[0],txb3[1],txb3[2]);
-  line(txb3[0],txb3[1],txb3[2], txb4[0],txb4[1],txb4[2]);
-  line(txb4[0],txb4[1],txb4[2], txb5[0],txb5[1],txb5[2]);
-  line(txb5[0],txb5[1],txb5[2], txb6[0],txb6[1],txb6[2]);
-  line(txb6[0],txb6[1],txb6[2], txb7[0],txb7[1],txb7[2]);
-  line(txb7[0],txb7[1],txb7[2], txb8[0],txb8[1],txb8[2]);
-  line(txb8[0],txb8[1],txb8[2], txb9[0],txb9[1],txb9[2]);
-  line(txb9[0],txb9[1],txb9[2], txb10[0],txb10[1],txb10[2]);
-  line(txb10[0],txb10[1],txb10[2], txb11[0],txb11[1],txb11[2]);
-  line(txb11[0],txb11[1],txb11[2], txb12[0],txb12[1],txb12[2]);
-  line(txb12[0],txb12[1],txb12[2], txb13[0],txb13[1],txb13[2]);
-  line(txb13[0],txb13[1],txb13[2], txb1[0],txb1[1],txb1[2]);
-  
-  line(txb14[0],txb14[1],txb14[2], txb15[0],txb15[1],txb15[2]);
-  line(txb15[0],txb15[1],txb15[2], txb16[0],txb16[1],txb16[2]);
-  line(txb16[0],txb16[1],txb16[2], txb17[0],txb17[1],txb17[2]);
-  line(txb17[0],txb17[1],txb17[2], txb14[0],txb14[1],txb14[2]);
-  
-  line(txb18[0],txb18[1],txb18[2], txb19[0],txb19[1],txb19[2]);
-  line(txb19[0],txb19[1],txb19[2], txb20[0],txb20[1],txb20[2]);
-  line(txb20[0],txb20[1],txb20[2], txb21[0],txb21[1],txb21[2]);
-  line(txb21[0],txb21[1],txb21[2], txb18[0],txb18[1],txb18[2]);
-  
-  line(tb1[0],tb1[1],tb1[2], txb1[0],txb1[1],txb1[2]);
-  line(tb2[0],tb2[1],tb2[2], txb2[0],txb2[1],txb2[2]);
-  line(tb3[0],tb3[1],tb3[2], txb3[0],txb3[1],txb3[2]);
-  line(tb4[0],tb4[1],tb4[2], txb4[0],txb4[1],txb4[2]);
-  line(tb5[0],tb5[1],tb5[2], txb5[0],txb5[1],txb5[2]);
-  line(tb6[0],tb6[1],tb6[2], txb6[0],txb6[1],txb6[2]);
-  line(tb7[0],tb7[1],tb7[2], txb7[0],txb7[1],txb7[2]);
-  line(tb8[0],tb8[1],tb8[2], txb8[0],txb8[1],txb8[2]);
-  line(tb9[0],tb9[1],tb9[2], txb9[0],txb9[1],txb9[2]);
-  line(tb10[0],tb10[1],tb10[2], txb10[0],txb10[1],txb10[2]);
-  line(tb11[0],tb11[1],tb11[2], txb11[0],txb11[1],txb11[2]);
-  line(tb12[0],tb12[1],tb12[2], txb12[0],txb12[1],txb12[2]);
-  line(tb13[0],tb13[1],tb13[2], txb13[0],txb13[1],txb13[2]);
-  
-  line(tb14[0],tb14[1],tb14[2], txb14[0],txb14[1],txb14[2]);
-  line(tb15[0],tb15[1],tb15[2], txb15[0],txb15[1],txb15[2]);
-  line(tb16[0],tb16[1],tb16[2], txb16[0],txb16[1],txb16[2]);
-  line(tb17[0],tb17[1],tb17[2], txb17[0],txb17[1],txb17[2]);
-  
-  line(tb18[0],tb18[1],tb18[2], txb18[0],txb18[1],txb18[2]);
-  line(tb19[0],tb19[1],tb19[2], txb19[0],txb19[1],txb19[2]);
-  line(tb20[0],tb20[1],tb20[2], txb20[0],txb20[1],txb20[2]);
-  line(tb21[0],tb21[1],tb21[2], txb21[0],txb21[1],txb21[2]);
-  */
 }
 
-void drawI() {                                             // Draw The Letter 'I'
-  stroke(0, 0, 255);                                       // Blue
-  line(ti1[0],ti1[1],ti1[2], ti2[0],ti2[1],ti2[2]);
-  line(ti2[0],ti2[1],ti2[2], ti3[0],ti3[1],ti3[2]);
-  line(ti3[0],ti3[1],ti3[2], ti4[0],ti4[1],ti4[2]);
-  line(ti4[0],ti4[1],ti4[2], ti5[0],ti5[1],ti5[2]);
-  line(ti5[0],ti5[1],ti5[2], ti6[0],ti6[1],ti6[2]);
-  line(ti6[0],ti6[1],ti6[2], ti7[0],ti7[1],ti7[2]);
-  line(ti7[0],ti7[1],ti7[2], ti8[0],ti8[1],ti8[2]);
-  line(ti8[0],ti8[1],ti8[2], ti9[0],ti9[1],ti9[2]);
-  line(ti9[0],ti9[1],ti9[2], ti10[0],ti10[1],ti10[2]);
-  line(ti10[0],ti10[1],ti10[2], ti11[0],ti11[1],ti11[2]);
-  line(ti11[0],ti11[1],ti11[2], ti12[0],ti12[1],ti12[2]);
-  line(ti12[0],ti12[1],ti12[2], ti1[0],ti1[1],ti1[2]);
-  
-  stroke(50, 50, 255);                                      // Light blue
-  line(txi1[0],txi1[1],txi1[2], txi2[0],txi2[1],txi2[2]);
-  line(txi2[0],txi2[1],txi2[2], txi3[0],txi3[1],txi3[2]);
-  line(txi3[0],txi3[1],txi3[2], txi4[0],txi4[1],txi4[2]);
-  line(txi4[0],txi4[1],txi4[2], txi5[0],txi5[1],txi5[2]);
-  line(txi5[0],txi5[1],txi5[2], txi6[0],txi6[1],txi6[2]);
-  line(txi6[0],txi6[1],txi6[2], txi7[0],txi7[1],txi7[2]);
-  line(txi7[0],txi7[1],txi7[2], txi8[0],txi8[1],txi8[2]);
-  line(txi8[0],txi8[1],txi8[2], txi9[0],txi9[1],txi9[2]);
-  line(txi9[0],txi9[1],txi9[2], txi10[0],txi10[1],txi10[2]);
-  line(txi10[0],txi10[1],txi10[2], txi11[0],txi11[1],txi11[2]);
-  line(txi11[0],txi11[1],txi11[2], txi12[0],txi12[1],txi12[2]);
-  line(txi12[0],txi12[1],txi12[2], txi1[0],txi1[1],txi1[2]);
-  
-  line(txi1[0],txi1[1],txi1[2], ti1[0],ti1[1],ti1[2]);
-  line(txi2[0],txi2[1],txi2[2], ti2[0],ti2[1],ti2[2]);
-  line(txi3[0],txi3[1],txi3[2], ti3[0],ti3[1],ti3[2]);
-  line(txi4[0],txi4[1],txi4[2], ti4[0],ti4[1],ti4[2]);
-  line(txi5[0],txi5[1],txi5[2], ti5[0],ti5[1],ti5[2]);
-  line(txi6[0],txi6[1],txi6[2], ti6[0],ti6[1],ti6[2]);
-  line(txi7[0],txi7[1],txi7[2], ti7[0],ti7[1],ti7[2]);
-  line(txi8[0],txi8[1],txi8[2], ti8[0],ti8[1],ti8[2]);
-  line(txi9[0],txi9[1],txi9[2], ti9[0],ti9[1],ti9[2]);
-  line(txi10[0],txi10[1],txi10[2], ti10[0],ti10[1],txi10[2]);
-  line(txi11[0],txi11[1],txi11[2], ti11[0],ti11[1],ti11[2]);
-  line(txi12[0],txi12[1],txi12[2], ti12[0],ti12[1],ti12[2]);
+void drawI() {                                                                                         // Draw The Letter 'I'
+  for (int i = 0; i < 12; i++) {                                                                       // Size 1 less than the number of array elements as using i+1 to draw to the next point
+      stroke(0, 0, 255);                                                                               // Blue                                                                  
+      line(arrI[i][0],arrI[i][1],arrI[i][2], arrI[i+1][0],arrI[i+1][1],arrI[i+1][2]);                  // Draw I Back outline
+      line(arrI[i][0],arrI[i][1],arrI[i][2] + 10.0f, arrI[i+1][0],arrI[i+1][1],arrI[i+1][2] + 10.0f);  // Draw I Front outline
+      stroke(50, 50, 255);                                                                             // Light blue
+      line(arrI[i][0],arrI[i][1],arrI[i][2], arrI[i][0],arrI[i][1],arrI[i][2] + 10.0f);                // Draw I Sides    
+  }
 }
 
-void drawG() {                                             // Draw The Letter 'G'
-  stroke(0, 0, 255);                                       // Blue
-  line(tg1[0],tg1[1],tg1[2], tg2[0],tg2[1],tg2[2]);
-  line(tg2[0],tg2[1],tg2[2], tg3[0],tg3[1],tg3[2]);
-  line(tg3[0],tg3[1],tg3[2], tg4[0],tg4[1],tg4[2]);
-  line(tg4[0],tg4[1],tg4[2], tg5[0],tg5[1],tg5[2]);
-  line(tg5[0],tg5[1],tg5[2], tg6[0],tg6[1],tg6[2]);
-  line(tg6[0],tg6[1],tg6[2], tg7[0],tg7[1],tg7[2]);
-  line(tg7[0],tg7[1],tg7[2], tg8[0],tg8[1],tg8[2]);
-  line(tg8[0],tg8[1],tg8[2], tg9[0],tg9[1],tg9[2]);
-  line(tg9[0],tg9[1],tg9[2], tg10[0],tg10[1],tg10[2]);
-  line(tg10[0],tg10[1],tg10[2], tg11[0],tg11[1],tg11[2]);
-  line(tg11[0],tg11[1],tg11[2], tg12[0],tg12[1],tg12[2]);
-  line(tg12[0],tg12[1],tg12[2], tg13[0],tg13[1],tg13[2]);
-  line(tg13[0],tg13[1],tg13[2], tg14[0],tg14[1],tg14[2]);
-  line(tg14[0],tg14[1],tg14[2], tg15[0],tg15[1],tg15[2]);
-  line(tg15[0],tg15[1],tg15[2], tg16[0],tg16[1],tg16[2]);
-  line(tg16[0],tg16[1],tg16[2], tg17[0],tg17[1],tg17[2]);
-  line(tg17[0],tg17[1],tg17[2], tg1[0],tg1[1],tg1[2]);
-  
-  stroke(50, 50, 255);                                       // Light Blue
-  line(txg1[0],txg1[1],txg1[2], txg2[0],txg2[1],txg2[2]);
-  line(txg2[0],txg2[1],txg2[2], txg3[0],txg3[1],txg3[2]);
-  line(txg3[0],txg3[1],txg3[2], txg4[0],txg4[1],txg4[2]);
-  line(txg4[0],txg4[1],txg4[2], txg5[0],txg5[1],txg5[2]);
-  line(txg5[0],txg5[1],txg5[2], txg6[0],txg6[1],txg6[2]);
-  line(txg6[0],txg6[1],txg6[2], txg7[0],txg7[1],txg7[2]);
-  line(txg7[0],txg7[1],txg7[2], txg8[0],txg8[1],txg8[2]);
-  line(txg8[0],txg8[1],txg8[2], txg9[0],txg9[1],txg9[2]);
-  line(txg9[0],txg9[1],txg9[2], txg10[0],txg10[1],txg10[2]);
-  line(txg10[0],txg10[1],txg10[2], txg11[0],txg11[1],txg11[2]);
-  line(txg11[0],txg11[1],txg11[2], txg12[0],txg12[1],txg12[2]);
-  line(txg12[0],txg12[1],txg12[2], txg13[0],txg13[1],txg13[2]);
-  line(txg13[0],txg13[1],txg13[2], txg14[0],txg14[1],txg14[2]);
-  line(txg14[0],txg14[1],txg14[2], txg15[0],txg15[1],txg15[2]);
-  line(txg15[0],txg15[1],txg15[2], txg16[0],txg16[1],txg16[2]);
-  line(txg16[0],txg16[1],txg16[2], txg17[0],txg17[1],txg17[2]);
-  line(txg17[0],txg17[1],txg17[2], txg1[0],txg1[1],txg1[2]);
-  
-  line(tg1[0],tg1[1],tg1[2], txg1[0],txg1[1],txg1[2]);
-  line(tg2[0],tg2[1],tg2[2], txg2[0],txg2[1],txg2[2]);
-  line(tg3[0],tg3[1],tg3[2], txg3[0],txg3[1],txg3[2]);
-  line(tg4[0],tg4[1],tg4[2], txg4[0],txg4[1],txg4[2]);
-  line(tg5[0],tg5[1],tg5[2], txg5[0],txg5[1],txg5[2]);
-  line(tg6[0],tg6[1],tg6[2], txg6[0],txg6[1],txg6[2]);
-  line(tg7[0],tg7[1],tg7[2], txg7[0],txg7[1],txg7[2]);
-  line(tg8[0],tg8[1],tg8[2], txg8[0],txg8[1],txg8[2]);
-  line(tg9[0],tg9[1],tg9[2], txg9[0],txg9[1],txg9[2]);
-  line(tg10[0],tg10[1],tg10[2], txg10[0],txg10[1],txg10[2]);
-  line(tg11[0],tg11[1],tg11[2], txg11[0],txg11[1],txg11[2]);
-  line(tg12[0],tg12[1],tg12[2], txg12[0],txg12[1],txg12[2]);
-  line(tg13[0],tg13[1],tg13[2], txg13[0],txg13[1],txg13[2]);
-  line(tg14[0],tg14[1],tg14[2], txg14[0],txg14[1],txg14[2]);
-  line(tg15[0],tg15[1],tg15[2], txg15[0],txg15[1],txg15[2]);
-  line(tg16[0],tg16[1],tg16[2], txg16[0],txg16[1],txg16[2]);
-  line(tg17[0],tg17[1],tg17[2], txg17[0],txg17[1],txg17[2]);
+void drawG() {                                                                                         // Draw The Letter 'G'
+  for (int i = 0; i < 17; i++) {                                                                       // Size 1 less than the number of array elements as using i+1 to draw to the next point
+      stroke(0, 0, 255);                                                                               // Blue                                                                  
+      line(arrG[i][0],arrG[i][1],arrG[i][2], arrG[i+1][0],arrG[i+1][1],arrG[i+1][2]);                  // Draw G Back outline
+      line(arrG[i][0],arrG[i][1],arrG[i][2] + 10.0f, arrG[i+1][0],arrG[i+1][1],arrG[i+1][2] + 10.0f);  // Draw G Front outline
+      stroke(50, 50, 255);                                                                             // Light blue
+      line(arrG[i][0],arrG[i][1],arrG[i][2], arrG[i][0],arrG[i][1],arrG[i][2] + 10.0f);                // Draw G Sides    
+  }
 }
 
-void drawF() {                                               // Draw The Letter 'F'
-  stroke(0, 0, 255);                                         // Blue
-  line(tf1[0],tf1[1],tf1[2], tf2[0],tf2[1],tf2[2]);
-  line(tf2[0],tf2[1],tf2[2], tf3[0],tf3[1],tf3[2]);
-  line(tf3[0],tf3[1],tf3[2], tf4[0],tf4[1],tf4[2]);
-  line(tf4[0],tf4[1],tf4[2], tf5[0],tf5[1],tf5[2]);
-  line(tf5[0],tf5[1],tf5[2], tf6[0],tf6[1],tf6[2]);
-  line(tf6[0],tf6[1],tf6[2], tf7[0],tf7[1],tf7[2]);
-  line(tf7[0],tf7[1],tf7[2], tf8[0],tf8[1],tf8[2]);
-  line(tf8[0],tf8[1],tf8[2], tf9[0],tf9[1],tf9[2]);
-  line(tf9[0],tf9[1],tf9[2], tf10[0],tf10[1],tf10[2]);
-  line(tf10[0],tf10[1],tf10[2], tf11[0],tf11[1],tf11[2]);
-  line(tf11[0],tf11[1],tf11[2], tf12[0],tf12[1],tf12[2]);
-  line(tf12[0],tf12[1],tf12[2], tf13[0],tf13[1],tf13[2]);
-  line(tf13[0],tf13[1],tf13[2], tf14[0],tf14[1],tf14[2]);
-  line(tf14[0],tf14[1],tf14[2], tf15[0],tf15[1],tf15[2]);
-  line(tf15[0],tf15[1],tf15[2], tf16[0],tf16[1],tf16[2]);
-  line(tf16[0],tf16[1],tf16[2], tf17[0],tf17[1],tf17[2]);
-  line(tf17[0],tf17[1],tf17[2], tf18[0],tf18[1],tf18[2]);
-  line(tf18[0],tf18[1],tf18[2], tf1[0],tf1[1],tf1[2]);
-    
-  stroke(50, 50, 255);                                         // Light Blue
-  line(txf1[0],txf1[1],txf1[2], txf2[0],txf2[1],txf2[2]);
-  line(txf2[0],txf2[1],txf2[2], txf3[0],txf3[1],txf3[2]);
-  line(txf3[0],txf3[1],txf3[2], txf4[0],txf4[1],txf4[2]);
-  line(txf4[0],txf4[1],txf4[2], txf5[0],txf5[1],txf5[2]);
-  line(txf5[0],txf5[1],txf5[2], txf6[0],txf6[1],txf6[2]);
-  line(txf6[0],txf6[1],txf6[2], txf7[0],txf7[1],txf7[2]);
-  line(txf7[0],txf7[1],txf7[2], txf8[0],txf8[1],txf8[2]);
-  line(txf8[0],txf8[1],txf8[2], txf9[0],txf9[1],txf9[2]);
-  line(txf9[0],txf9[1],txf9[2], txf10[0],txf10[1],txf10[2]);
-  line(txf10[0],txf10[1],txf10[2], txf11[0],txf11[1],txf11[2]);
-  line(txf11[0],txf11[1],txf11[2], txf12[0],txf12[1],txf12[2]);
-  line(txf12[0],txf12[1],txf12[2], txf13[0],txf13[1],txf13[2]);
-  line(txf13[0],txf13[1],txf13[2], txf14[0],txf14[1],txf14[2]);
-  line(txf14[0],txf14[1],txf14[2], txf15[0],txf15[1],txf15[2]);
-  line(txf15[0],txf15[1],txf15[2], txf16[0],txf16[1],txf16[2]);
-  line(txf16[0],txf16[1],txf16[2], txf17[0],txf17[1],txf17[2]);
-  line(txf17[0],txf17[1],txf17[2], txf18[0],txf18[1],txf18[2]);
-  line(txf18[0],txf18[1],txf18[2], txf1[0],txf1[1],txf1[2]);
-  
-  // Joining Lines
-  line(tf1[0],tf1[1],tf1[2], txf1[0],txf1[1],txf1[2]);
-  line(tf2[0],tf2[1],tf2[2], txf2[0],txf2[1],txf2[2]);
-  line(tf3[0],tf3[1],tf3[2], txf3[0],txf3[1],txf3[2]);
-  line(tf4[0],tf4[1],tf4[2], txf4[0],txf4[1],txf4[2]);
-  line(tf5[0],tf5[1],tf5[2], txf5[0],txf5[1],txf5[2]);
-  line(tf6[0],tf6[1],tf6[2], txf6[0],txf6[1],txf6[2]);
-  line(tf7[0],tf7[1],tf7[2], txf7[0],txf7[1],txf7[2]);
-  line(tf8[0],tf8[1],tf8[2], txf8[0],txf8[1],txf8[2]);
-  line(tf9[0],tf9[1],tf9[2], txf9[0],txf9[1],txf9[2]);
-  line(tf10[0],tf10[1],tf10[2], txf10[0],txf10[1],txf10[2]);
-  line(tf11[0],tf11[1],tf11[2], txf11[0],txf11[1],txf11[2]);
-  line(tf12[0],tf12[1],tf12[2], txf12[0],txf12[1],txf12[2]);
-  line(tf13[0],tf13[1],tf13[2], txf13[0],txf13[1],txf13[2]);
-  line(tf14[0],tf14[1],tf14[2], txf14[0],txf14[1],txf14[2]);
-  line(tf15[0],tf15[1],tf15[2], txf15[0],txf15[1],txf15[2]);
-  line(tf16[0],tf16[1],tf16[2], txf16[0],txf16[1],txf16[2]);
-  line(tf17[0],tf17[1],tf17[2], txf17[0],txf17[1],txf17[2]);
-  line(tf18[0],tf18[1],tf18[2], txf18[0],txf18[1],txf18[2]);
+void drawF() {                                                                                         // Draw The Letter 'F' 
+  for (int i = 0; i < 18; i++) {                                                                       // Size 1 less than the number of array elements as using i+1 to draw to the next point
+      stroke(0, 0, 255);                                                                               // Blue                                                                  
+      line(arrF[i][0],arrF[i][1],arrF[i][2], arrF[i+1][0],arrF[i+1][1],arrF[i+1][2]);                  // Draw F Back outline
+      line(arrF[i][0],arrF[i][1],arrF[i][2] + 10.0f, arrF[i+1][0],arrF[i+1][1],arrF[i+1][2] + 10.0f);  // Draw F Front outline
+      stroke(50, 50, 255);                                                                             // Light blue
+      line(arrF[i][0],arrF[i][1],arrF[i][2], arrF[i][0],arrF[i][1],arrF[i][2] + 10.0f);                // Draw F Sides    
+  }
 }
 
-void drawO() {                                             // Draw The Letter 'O'
-  stroke(0, 0, 255);                                       // Blue
-  line(to1[0],to1[1],to1[2], to2[0],to2[1],to2[2]);
-  line(to2[0],to2[1],to2[2], to3[0],to3[1],to3[2]);
-  line(to3[0],to3[1],to3[2], to4[0],to4[1],to4[2]);
-  line(to4[0],to4[1],to4[2], to5[0],to5[1],to5[2]);
-  line(to5[0],to5[1],to5[2], to6[0],to6[1],to6[2]);
-  line(to6[0],to6[1],to6[2], to7[0],to7[1],to7[2]);
-  line(to7[0],to7[1],to7[2], to8[0],to8[1],to8[2]);
-  line(to8[0],to8[1],to8[2], to1[0],to1[1],to1[2]);
-  
-  line(to9[0],to9[1],to9[2], to10[0],to10[1],to10[2]);
-  line(to10[0],to10[1],to10[2], to11[0],to11[1],to11[2]);
-  line(to11[0],to11[1],to11[2], to12[0],to12[1],to12[2]);
-  line(to12[0],to12[1],to12[2], to9[0],to9[1],to9[2]);
-  
-  stroke(50, 50, 255);                                     // Light blue
-  line(txo1[0],txo1[1],txo1[2], txo2[0],txo2[1],txo2[2]);
-  line(txo2[0],txo2[1],txo2[2], txo3[0],txo3[1],txo3[2]);
-  line(txo3[0],txo3[1],txo3[2], txo4[0],txo4[1],txo4[2]);
-  line(txo4[0],txo4[1],txo4[2], txo5[0],txo5[1],txo5[2]);
-  line(txo5[0],txo5[1],txo5[2], txo6[0],txo6[1],txo6[2]);
-  line(txo6[0],txo6[1],txo6[2], txo7[0],txo7[1],txo7[2]);
-  line(txo7[0],txo7[1],txo7[2], txo8[0],txo8[1],txo8[2]);  
-  line(txo8[0],txo8[1],txo8[2], txo1[0],txo1[1],txo1[2]);
-  
-  line(txo9[0],txo9[1],txo9[2], txo10[0],txo10[1],txo10[2]);
-  line(txo10[0],txo10[1],txo10[2], txo11[0],txo11[1],txo11[2]);
-  line(txo11[0],txo11[1],txo11[2], txo12[0],txo12[1],txo12[2]);
-  line(txo12[0],txo12[1],txo12[2], txo9[0],txo9[1],txo9[2]);
-  
-  line(to1[0],to1[1],to1[2], txo1[0],txo1[1],txo1[2]);
-  line(to2[0],to2[1],to2[2], txo2[0],txo2[1],txo2[2]);
-  line(to3[0],to3[1],to3[2], txo3[0],txo3[1],txo3[2]);
-  line(to4[0],to4[1],to4[2], txo4[0],txo4[1],txo4[2]);
-  line(to5[0],to5[1],to5[2], txo5[0],txo5[1],txo5[2]);
-  line(to6[0],to6[1],to6[2], txo6[0],txo6[1],txo6[2]);
-  line(to7[0],to7[1],to7[2], txo7[0],txo7[1],txo7[2]);
-  line(to8[0],to8[1],to8[2], txo8[0],txo8[1],txo8[2]);  
-  line(to9[0],to9[1],to9[2], txo9[0],txo9[1],txo9[2]);
-  line(to10[0],to10[1],to10[2], txo10[0],txo10[1],txo10[2]);
-  line(to11[0],to11[1],to11[2], txo11[0],txo11[1],txo11[2]);
-  line(to12[0],to12[1],to12[2], txo12[0],txo12[1],txo12[2]);
+void drawO() {                                                                                         // Draw The Letter 'O'
+  for (int i = 0; i < 8; i++) {                                                                        // Size 1 less than the number of array elements as using i+1 to draw to the next point
+      stroke(0, 0, 255);                                                                               // Blue                                                                  
+      line(arrO[i][0],arrO[i][1],arrO[i][2], arrO[i+1][0],arrO[i+1][1],arrO[i+1][2]);                  // Draw O Back outline
+      line(arrO[i][0],arrO[i][1],arrO[i][2] + 10.0f, arrO[i+1][0],arrO[i+1][1],arrO[i+1][2] + 10.0f);  // Draw O Front outline
+      stroke(50, 50, 255);                                                                             // Light blue
+      line(arrO[i][0],arrO[i][1],arrO[i][2], arrO[i][0],arrO[i][1],arrO[i][2] + 10.0f);                // Draw O Sides  
+      
+      if (i < 4) {
+        line(arrOhole[i][0],arrOhole[i][1],arrOhole[i][2], arrOhole[i][0],arrOhole[i][1],arrOhole[i][2] + 10.0f);                // Draw O hole 1 Side
+        stroke(0, 0, 255);                                                                                                       // Blue
+        line(arrOhole[i][0],arrOhole[i][1],arrOhole[i][2], arrOhole[i+1][0],arrOhole[i+1][1],arrOhole[i+1][2]);                  // Draw O hole 1 front
+        line(arrOhole[i][0],arrOhole[i][1],arrOhole[i][2] + 10.0f, arrOhole[i+1][0],arrOhole[i+1][1],arrOhole[i+1][2] + 10.0f);  // Draw O hole 1 back
+      } 
+      else continue;
+  }
 }
 
-void drawT() {                                             // Draw The Letter 'T'
-  stroke(0, 0, 255);                                       // Blue
-  line(tt1[0],tt1[1],tt1[2], tt2[0],tt2[1],tt2[2]);
-  line(tt2[0],tt2[1],tt2[2], tt3[0],tt3[1],tt3[2]);
-  line(tt3[0],tt3[1],tt3[2], tt4[0],tt4[1],tt4[2]);
-  line(tt4[0],tt4[1],tt4[2], tt5[0],tt5[1],tt5[2]);
-  line(tt5[0],tt5[1],tt5[2], tt6[0],tt6[1],tt6[2]);
-  line(tt6[0],tt6[1],tt6[2], tt7[0],tt7[1],tt7[2]);
-  line(tt7[0],tt7[1],tt7[2], tt8[0],tt8[1],tt8[2]);
-  line(tt8[0],tt8[1],tt8[2], tt9[0],tt9[1],tt9[2]);
-  line(tt9[0],tt9[1],tt9[2], tt10[0],tt10[1],tt10[2]);
-  line(tt10[0],tt10[1],tt10[2], tt11[0],tt11[1],tt11[2]);
-  line(tt11[0],tt11[1],tt11[2], tt12[0],tt12[1],tt12[2]);
-  line(tt12[0],tt12[1],tt12[2], tt1[0],tt1[1],tt1[2]);
-  
-  stroke(50, 50, 255);                                      // Light blue
-  line(txt1[0],txt1[1],txt1[2], txt2[0],txt2[1],txt2[2]);
-  line(txt2[0],txt2[1],txt2[2], txt3[0],txt3[1],txt3[2]);
-  line(txt3[0],txt3[1],txt3[2], txt4[0],txt4[1],txt4[2]);
-  line(txt4[0],txt4[1],txt4[2], txt5[0],txt5[1],txt5[2]);
-  line(txt5[0],txt5[1],txt5[2], txt6[0],txt6[1],txt6[2]);
-  line(txt6[0],txt6[1],txt6[2], txt7[0],txt7[1],txt7[2]);
-  line(txt7[0],txt7[1],txt7[2], txt8[0],txt8[1],txt8[2]);
-  line(txt8[0],txt8[1],txt8[2], txt9[0],txt9[1],txt9[2]);
-  line(txt9[0],txt9[1],txt9[2], txt10[0],txt10[1],txt10[2]);
-  line(txt10[0],txt10[1],txt10[2], txt11[0],txt11[1],txt11[2]);
-  line(txt11[0],txt11[1],txt11[2], txt12[0],txt12[1],txt12[2]);
-  line(txt12[0],txt12[1],txt12[2], txt1[0],txt1[1],txt1[2]);
-  
-  line(tt1[0],tt1[1],tt1[2], txt1[0],txt1[1],txt1[2]);
-  line(tt2[0],tt2[1],tt2[2], txt2[0],txt2[1],txt2[2]);
-  line(tt3[0],tt3[1],tt3[2], txt3[0],txt3[1],txt3[2]);
-  line(tt4[0],tt4[1],tt4[2], txt4[0],txt4[1],txt4[2]);
-  line(tt5[0],tt5[1],tt5[2], txt5[0],txt5[1],txt5[2]);
-  line(tt6[0],tt6[1],tt6[2], txt6[0],txt6[1],txt6[2]);
-  line(tt7[0],tt7[1],tt7[2], txt7[0],txt7[1],txt7[2]);
-  line(tt8[0],tt8[1],tt8[2], txt8[0],txt8[1],txt8[2]);
-  line(tt9[0],tt9[1],tt9[2], txt9[0],txt9[1],txt9[2]);
-  line(tt10[0],tt10[1],tt10[2], txt10[0],txt10[1],txt10[2]);
-  line(tt11[0],tt11[1],tt11[2], txt11[0],txt11[1],txt11[2]);
-  line(tt12[0],tt12[1],tt12[2], txt12[0],txt12[1],txt12[2]);
+void drawT() {                                                                                         // Draw The Letter 'T'
+  for (int i = 0; i < 12; i++) {                                                                       // Size 1 less than the number of array elements as using i+1 to draw to the next point
+      stroke(0, 0, 255);                                                                               // Blue                                                                  
+      line(arrT[i][0],arrT[i][1],arrT[i][2], arrT[i+1][0],arrT[i+1][1],arrT[i+1][2]);                  // Draw F Back outline
+      line(arrT[i][0],arrT[i][1],arrT[i][2] + 10.0f, arrT[i+1][0],arrT[i+1][1],arrT[i+1][2] + 10.0f);  // Draw F Front outline
+      stroke(50, 50, 255);                                                                             // Light blue
+      line(arrT[i][0],arrT[i][1],arrT[i][2], arrT[i][0],arrT[i][1],arrT[i][2] + 10.0f);                // Draw F Sides  
+  }
 }
 
 
