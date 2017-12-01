@@ -22,7 +22,6 @@ one static, one scaling, one rotating, and one translating
 
  No. | File        | Description 
  --- | ------------- | ------------ 
- 1 | *Joe_O_Regan_Graphics_CA_K00203642_V2.pde* | Submitted Version 
-
- 2 | *Joe_O_Regan_Graphics_CA_K00203642_V3.pde* | Tidied Up Version 
- 3 | *joeCAEdit-ProcessingJS.pde* | ProcessingJS Version 
+ 1 | **Joe_O_Regan_Graphics_CA_K00203642_V2.pde** | Submitted Version
+ 2 | **Joe_O_Regan_Graphics_CA_K00203642_V3.pde** | Tidied Up Version
+ 3 | **joeCAEdit-ProcessingJS.pde** | ProcessingJS Version 
