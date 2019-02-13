@@ -1,6 +1,8 @@
 # Computer Graphics
 ## Joe O'Regan (K00203642)
-### Year 3, BSc Computing (Games Design and Development)
+### Year 3, Semester 5
+#### BSc Computing (Games Design and Development)
+##### Limerick Institute of Technology
 
 ---
 
@@ -54,3 +56,7 @@ Theme is car racing
 ###### 3D Monster Truck Scene Created Using Processing
 
 ---
+
+## Links
+
+[Processing Web-Page](https://processing.org/)
