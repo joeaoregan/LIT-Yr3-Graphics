@@ -1,3 +1,9 @@
+/*
+ * Joe O'Regan
+ * 25/06/2025
+ * Convert Process to P5.js
+ */
+
 // Click and drag the mouse to view the scene from different angles.
 let isLooping = true; // Loop is set to on, used to pause and unpause the scene
 let zoom; // Zoom in and out of the scene using the mouse scroll wheel
@@ -15,9 +21,6 @@ let centerY = -50.0;
 let centerZ = 0.0;
 let aspect, cameraY, cameraZ;
 
-// const bl = 'blue';
-// const rd = 'red';
-// const gr = 'green';
 const rd = [255, 0, 0];
 const gr = [0, 255, 0];
 const bl = [0, 0, 255];
@@ -28,7 +31,16 @@ const keyD = 68;
 const keyW = 87;
 const keyP = 80;
 const keyX = 88;
+const keyC = 67;
+const keyT = 84;
+const keyL = 76;
+const keyB = 66;
+const keyR = 82;
 let isAxisLinesVisible = true;
+let isCarVisible = true;
+let isTextVisible = true;
+let isWheelLineVisible = true;
+let isBigFootVisible = true;
 
 /** Monster Truck Points */
 const truckBody1 = [
@@ -423,7 +435,7 @@ function setup() {
     [0.0, 0.0, 0.0, 1.0],
   ]; // roatate around z axis
   // camera(50.0, -80.0, 240.0, 50.0, -70.0, 0.0, 0.0, 1.0, 0.0);
-  camera(50.0, 50.0, -100.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+  // camera(50.0, 50.0, -100.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 
   smooth();
   frameRate(8);
@@ -533,19 +545,49 @@ function keyPressed() {
     isLooping = true;
     loop(); // Loop if unpaused
   }
+
+  if (keyIsDown(keyX)) {
+    isAxisLinesVisible = !isAxisLinesVisible;
+  }
+
+  if (keyIsDown(keyC)) {
+    isCarVisible = !isCarVisible; // toggle car visibility
+  }
+
+  if (keyIsDown(keyT)) {
+    isTextVisible = !isTextVisible; // toggle text visibility
+  }
+
+  if (keyIsDown(keyL)) {
+    isWheelLineVisible = !isWheelLineVisible; // toggle wheel line visibility
+  }
+
+  if (keyIsDown(keyB)) {
+    isBigFootVisible = !isBigFootVisible; // toggle Big Foot visibility
+  }
+
+  if (keyIsDown(keyR)) {
+    isAxisLinesVisible = true;
+    isCarVisible = true;
+    isTextVisible = true;
+    isWheelLineVisible = true;
+    isBigFootVisible = true;
+  }
 }
 
 function drawCar(colour) {
-  stroke(colour);
-  drawDoubleOnX(carBody, 30.0, true); // Draw The Car Body Outline
-  stroke(0, 255, 255); // Draw The Windows Light Blue
-  drawDoubleOnX(carSideWindowFront, 30.0, false); // Draw The Front Side Windows
-  drawDoubleOnX(carSideWindowBack, 30.0, false); // Draw The Back Side Windows
-  drawOnce(carFrontWindow); // Draw The Front Windscreen
-  drawOnce(carBackWindow); // Draw The Back Windscreen
-  stroke(255, 255, 0); // Draw The Lights Yellow
-  drawDoubleOnX(carLightFront, 23.0, false); // Draw The Front Lights, Duplicating On X Axis
-  drawDoubleOnX(carLightBack, 25.0, false); // Draw The Back Lights, Duplicating On X Axis
+  if (isCarVisible) {
+    stroke(colour);
+    drawDoubleOnX(carBody, 30.0, true); // Draw The Car Body Outline
+    stroke(0, 255, 255); // Draw The Windows Light Blue
+    drawDoubleOnX(carSideWindowFront, 30.0, false); // Draw The Front Side Windows
+    drawDoubleOnX(carSideWindowBack, 30.0, false); // Draw The Back Side Windows
+    drawOnce(carFrontWindow); // Draw The Front Windscreen
+    drawOnce(carBackWindow); // Draw The Back Windscreen
+    stroke(255, 255, 0); // Draw The Lights Yellow
+    drawDoubleOnX(carLightFront, 23.0, false); // Draw The Front Lights, Duplicating On X Axis
+    drawDoubleOnX(carLightBack, 25.0, false); // Draw The Back Lights, Duplicating On X Axis
+  }
 }
 
 function drawOnce(array) {
@@ -592,34 +634,36 @@ function drawTruckShape(array, array2, connect) {
 }
 
 function drawLetter(array, offset) {
-  strokeWeight(2);
-  for (let i = 0; i < array.length - 1; i++) {
-    stroke(0, 0, 255); // Blue: front and back
-    line(
-      array[i][0],
-      array[i][1],
-      array[i][2],
-      array[i + 1][0],
-      array[i + 1][1],
-      array[i + 1][2]
-    ); // Draw Letter Back outline
-    line(
-      array[i][0],
-      array[i][1],
-      array[i][2] + offset,
-      array[i + 1][0],
-      array[i + 1][1],
-      array[i + 1][2] + offset
-    ); // Draw Letter Front outline
-    stroke(50, 50, 255); // Light blue: sides
-    line(
-      array[i][0],
-      array[i][1],
-      array[i][2],
-      array[i][0],
-      array[i][1],
-      array[i][2] + offset
-    ); // Draw Letter Sides
+  if (isTextVisible) {
+    strokeWeight(2);
+    for (let i = 0; i < array.length - 1; i++) {
+      stroke(0, 0, 255); // Blue: front and back
+      line(
+        array[i][0],
+        array[i][1],
+        array[i][2],
+        array[i + 1][0],
+        array[i + 1][1],
+        array[i + 1][2]
+      ); // Draw Letter Back outline
+      line(
+        array[i][0],
+        array[i][1],
+        array[i][2] + offset,
+        array[i + 1][0],
+        array[i + 1][1],
+        array[i + 1][2] + offset
+      ); // Draw Letter Front outline
+      stroke(50, 50, 255); // Light blue: sides
+      line(
+        array[i][0],
+        array[i][1],
+        array[i][2],
+        array[i][0],
+        array[i][1],
+        array[i][2] + offset
+      ); // Draw Letter Sides
+    }
   }
 }
 
@@ -706,36 +750,39 @@ function drawDoubleOnX(array, offset, connect) {
 }
 
 function drawMonsterTruck(colour) {
-  push();
-  strokeWeight(2);
-  stroke(colour);
-  drawTruckShape(truckBody1, truckBody2, true);
+  if (isBigFootVisible) {
+    // push();
+    strokeWeight(2);
+    stroke(colour);
+    drawTruckShape(truckBody1, truckBody2, true);
 
-  stroke("yellow");
-  drawDoubleOnZ(racingStripeYel, 30.0, false);
-  stroke("red");
-  drawDoubleOnZ(racingStripeRed, 30.0, false);
+    stroke("yellow");
+    drawDoubleOnZ(racingStripeYel, 30.0, false);
+    stroke("red");
+    drawDoubleOnZ(racingStripeRed, 30.0, false);
 
-  strokeWeight(1);
-  stroke(50);
-  drawDoubleOnZ(chassis, 4, 10.0, true);
+    strokeWeight(1);
+    stroke(50);
+    drawDoubleOnZ(chassis, 4, 10.0, true);
 
-  drawLights();
-  drawWindows();
+    drawLights();
+    drawWindows();
 
-  translate(20, -10, 40);
-  drawWheel(25, 10, 10);
-  translate(0, 0, 40);
-  drawWheel(25, 10, 10);
-  translate(40, 0, 0);
-  drawWheel(25, 10, 10);
-  translate(0, 0, -40);
-  drawWheel(25, 10, 10);
-  translate(0, 0, 20);
-  drawWheel(20, 2, 30); // Axel 1
-  translate(-40, 0, 0);
-  drawWheel(20, 2, 30);
-  pop();
+    translate(20, -10, 40);
+    drawWheel(25, 10, 10);
+    translate(0, 0, 40);
+    drawWheel(25, 10, 10);
+    translate(40, 0, 0);
+    drawWheel(25, 10, 10);
+    translate(0, 0, -40);
+    drawWheel(25, 10, 10);
+    translate(0, 0, 20);
+    drawWheel(20, 2, 30); // Axel 1
+    translate(-40, 0, 0);
+    drawWheel(20, 2, 30);
+    // pop();
+    translate(-20, 10, -60); // reset Big Foot translate
+  }
 }
 
 function drawLights() {
@@ -813,36 +860,34 @@ function drawWheel(sides, r, h) {
   endShape(CLOSE);
 
   // red crosses on wheels to show spinning
-  strokeWeight(1);
-  stroke(255, 0, 0);
+  if (isWheelLineVisible) {
+    strokeWeight(1);
+    stroke(255, 0, 0);
 
-  if (r >= 10) {
-    translate(0, 0, 8);
-    line(
-      wheel[1][0],
-      wheel[1][1],
-      wheel[1][2],
-      wheel[2][0],
-      wheel[2][1],
-      wheel[2][2]
-    );
-    line(
-      wheel[3][0],
-      wheel[3][1],
-      wheel[3][2],
-      wheel[4][0],
-      wheel[4][1],
-      wheel[4][2]
-    );
-    translate(0, 0, -8);
+    if (r >= 10) {
+      translate(0, 0, 8);
+      line(
+        wheel[1][0],
+        wheel[1][1],
+        wheel[1][2],
+        wheel[2][0],
+        wheel[2][1],
+        wheel[2][2]
+      );
+      line(
+        wheel[3][0],
+        wheel[3][1],
+        wheel[3][2],
+        wheel[4][0],
+        wheel[4][1],
+        wheel[4][2]
+      );
+      translate(0, 0, -8);
+    }
   }
 }
 
 function drawAxes() {
-  if (keyIsDown(keyX)) {
-    isAxisLinesVisible = !isAxisLinesVisible;
-  }
-
   if (isAxisLinesVisible) {
     strokeWeight(5);
     stroke(255, 0, 0);
