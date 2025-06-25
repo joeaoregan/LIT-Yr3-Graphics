@@ -26,6 +26,9 @@ const keyA = 65;
 const keyS = 83;
 const keyD = 68;
 const keyW = 87;
+const keyP = 80;
+const keyX = 88;
+let isAxisLinesVisible = true;
 
 /** Monster Truck Points */
 const truckBody1 = [
@@ -436,15 +439,16 @@ function draw() {
   cameraZ = cameraY / tan(fov / 2.0);
 
   //translate(375, 450, 500);
-  drawAxes(); // draw X, Y, Z axes
 
   perspective(fov, aspect, cameraZ / 10.0, cameraZ * 10.0); // Set the camera starting position
+  orbitControl(); // Enable orbiting with the mouse.
+  // lights(); // Turn on the lights.
 
-  // Enable orbiting with the mouse.
-  orbitControl();
+  translate(-50, 0, 0);
+  drawAxes(); // draw X, Y, Z axes
 
-  // Turn on the lights.
-  // lights();
+  translate(100, 0, 0);
+
   drawMonsterTruck(bl);
 
   translate(85, 0, 20);
@@ -454,8 +458,7 @@ function draw() {
   translate(35, 0, 0);
   drawCar(gr); // Draw Green Car
 
-  strokeWeight(2);
-  translate(0, 40, 0); // Lower the writing
+  translate(-100, 40, 0); // Lower the writing
   drawLetter(arrB, 13, 10.0); // Draw The Letter 'B'
   drawLetter(arrBhole1, 4, 10.0);
   drawLetter(arrBhole2, 4, 10.0);
@@ -480,10 +483,6 @@ function draw() {
 
 function MoveCamera() {
   if (keyPressed) {
-    // if (keyIsDown(UP_ARROW) || key == "w" || key == "W") centerY -= 10;
-    // else if (keyIsDown(DOWN_ARROW) || key == "s" || key == "S") centerY += 10;
-    // else if (keyIsDown(LEFT_ARROW) || key == "a" || key == "A") centerX -= 10;
-    // else if (keyIsDown(RIGHT_ARROW) || key == "d" || key == "D") centerX += 10;
     if (keyIsDown(UP_ARROW) || keyIsDown(keyW)) centerY -= 10;
     else if (keyIsDown(DOWN_ARROW) || keyIsDown(keyS)) centerY += 10;
     else if (keyIsDown(LEFT_ARROW) || keyIsDown(keyA)) centerX -= 10;
@@ -527,7 +526,7 @@ function MoveAndScaleText() {
 }
 
 function keyPressed() {
-  if (key == " " && isLooping == true) {
+  if ((key == " " || keyIsDown(keyP)) && isLooping == true) {
     isLooping = false; // Set the pause flag
     noLoop(); // Stop looping if paused
   } else {
@@ -593,6 +592,7 @@ function drawTruckShape(array, array2, connect) {
 }
 
 function drawLetter(array, offset) {
+  strokeWeight(2);
   for (let i = 0; i < array.length - 1; i++) {
     stroke(0, 0, 255); // Blue: front and back
     line(
@@ -839,12 +839,18 @@ function drawWheel(sides, r, h) {
 }
 
 function drawAxes() {
-  strokeWeight(5);
-  stroke(255, 0, 0);
-  line(-50, 0, 0, 50, 0, 0); // Red X axis
-  stroke(0, 255, 0);
-  line(0, -50, 0, 0, 50, 0); // Green Y axis
-  stroke(0, 0, 255);
-  line(0, 0, -50, 0, 0, 50); // Blue Z axis
+  if (keyIsDown(keyX)) {
+    isAxisLinesVisible = !isAxisLinesVisible;
+  }
+
+  if (isAxisLinesVisible) {
+    strokeWeight(5);
+    stroke(255, 0, 0);
+    line(-50, 0, 0, 50, 0, 0); // Red X axis
+    stroke(0, 255, 0);
+    line(0, -50, 0, 0, 50, 0); // Green Y axis
+    stroke(0, 0, 255);
+    line(0, 0, -50, 0, 0, 50); // Blue Z axis
+  }
   strokeWeight(1);
 }
