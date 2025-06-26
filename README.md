@@ -27,7 +27,7 @@
 House that moves with mouse cursor, drawn from a collection of points using PShape
 
 - The original star shape code is included, and a modified Processing.js compatible version
-- I modified the original house code to work with Javascript, this can be seen here: [Processing.js Version](http://www.joeaoregan.ie/Processing/processing.html#lab4)
+- I modified the original house code to work with Javascript, this can be seen here: ~~[Processing.js Version](http://www.joeaoregan.ie/Processing/processing.html#lab4)~~ (EDIT: No it can't, see "See P5.js on GitHub Pages" link above)
 
 ---
 
@@ -38,7 +38,7 @@ Bridge that moves with cursor, created in Processing
 - I modified the original version to work with Javascript
 - I added a version that works with points instead of PShape
 - The points version was then modified to work with Processing.js online
-- The working JavaScript version can be seen here: [Processing.js Version](http://www.joeaoregan.ie/Processing/processing.html#lab4)
+- The working JavaScript version can be seen here: ~~[Processing.js Version](http://www.joeaoregan.ie/Processing/processing.html#lab4)~~ (EDIT: No it can't, see "See P5.js on GitHub Pages" link above)
 
 ---
 
