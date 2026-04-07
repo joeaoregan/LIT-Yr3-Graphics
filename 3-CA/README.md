@@ -4,7 +4,7 @@
 ![Module](https://img.shields.io/badge/Module-Computer%20Graphics-brightgreen?style=flat-square)
 
 ## Computer-Graphics-CA
-![alt text](../Screenshots/3DScene.png "3D Monster Truck Scene Created Using Processing")
+![alt text](../docs/images/3DScene.png "3D Monster Truck Scene Created Using Processing")
 
 ###### 3D Monster Truck Scene Created Using Processing
 

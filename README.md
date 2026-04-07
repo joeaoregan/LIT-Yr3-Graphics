@@ -27,9 +27,9 @@
 
 # Computer-Graphics-CA
 
-1. Lab 4 House 2D
-2. Lab 4 Bridge 2D
-3. CA Big Foot 3D Scene
+1. [Lab 4 House 2D](/1-House/README.md)
+2. [Lab 4 Bridge 2D](/2-Bridge/README.md)
+3. [CA Big Foot 3D Scene](/3-CA/README.md)
 
 ---
 
@@ -69,11 +69,11 @@ Theme is car racing
 
 ## Screenshots
 
-![Processing: 2D Bridge](https://raw.githubusercontent.com/joeaoregan/LIT-Yr3-S6-Graphics/master/Screenshots/Bridge.png "Processing: 2D Bridge")
+![Processing: 2D Bridge](docs/images/Bridge.png "Processing: 2D Bridge")
 
 ###### 2D Bridge
 
-![Processing: CA 3D Monster Truck Scene](https://raw.githubusercontent.com/joeaoregan/LIT-Yr3-S6-Graphics/master/Screenshots/3DScene.png "3D Monster Truck Scene Created Using Processing")
+![Processing: CA 3D Monster Truck Scene](docs/images/3DScene.png "3D Monster Truck Scene Created Using Processing")
 
 ###### 3D Monster Truck Scene Created Using Processing
 

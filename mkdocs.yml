@@ -1,0 +1,91 @@
+site_name: Joe O'Regan | Graphics
+docs_dir: docs
+site_dir: site
+
+copyright: Copyright &copy; 2026 Joe O'Regan
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/joeaoregan/
+    - icon: fontawesome/brands/github
+      link: https://github.com/joeaoregan
+    - icon: material/certificate
+      link: https://www.credly.com/users/joe-o-regan
+    - icon: simple/githubpages
+      link: https://joeaoregan.github.io/
+    - icon: simple/artstation
+      link: https://www.artstation.com/joeaoregan
+    - icon: simple/sketchfab
+      link: https://www.sketchfab.com/joeoregan      
+
+theme:
+  name: material  
+  favicon: images/favicon.ico
+  icon:
+    admonition:
+      note: material/alpha-j
+      success: material/alpha-j
+      warning: material/alpha-j
+      danger: material/alpha-j
+  logo: images/logo.png
+  palette: 
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tabs.sticky
+    - navigation.sections
+    - toc.follow
+    - navigation.footer
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.path
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: 
+    - Home: index.md
+    - External Links:    
+      - Linkedin: https://www.linkedin.com/in/joeaoregan/
+      - GitHub: https://github.com/joeaoregan
+  - Star 2D: stars/index.md
+  - House 2D: house/index.md
+  - Bridge 2D: bridge/index.md
+  - CA 3D: ca/index.md
+  
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - def_list
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html  
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  - material.extensions.preview:
+      configurations:
+        - targets:
+            include:
+              - 2d/*
+
+repo_url: https://github.com/joeaoregan/LIT-Yr3-Graphics
+repo_name: GitHub
+
+site_url: https://joeaoregan.github.io/
