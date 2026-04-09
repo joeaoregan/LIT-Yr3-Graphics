@@ -20,7 +20,7 @@ extra:
       link: https://www.sketchfab.com/joeoregan      
 
 theme:
-  name: material  
+  name: material
   favicon: images/favicon.ico
   icon:
     admonition:
@@ -88,4 +88,4 @@ markdown_extensions:
 repo_url: https://github.com/joeaoregan/LIT-Yr3-Graphics
 repo_name: GitHub
 
-site_url: https://joeaoregan.github.io/
+site_url: https://joeaoregan.github.io/LIT-Yr3-Graphics

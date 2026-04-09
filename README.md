@@ -19,9 +19,8 @@
 **Course**: BSc (Honours) in Computing (Games Design and Development)  
 **Module**: Graphics
 
----
-
-[See P5.js on GitHub Pages](https://joeaoregan.github.io/LIT-Yr3-Graphics/)
+- [Portfolio Docs](https://joeaoregan.github.io/college/2018-lit/year2/#mobile-application-development)
+- [See P5.js on GitHub Pages](https://joeaoregan.github.io/LIT-Yr3-Graphics/)
 
 ---
 

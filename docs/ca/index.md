@@ -4,13 +4,26 @@
 
 LIT BSc in Games Design, year 3 Computer Graphics module CA converted from Processing to P5.js.
 
+Take Home Assignment for 3rd year ***Computer Graphics*** module of 
+Games Design and Development - BSc (Honours) in Computing (Level 8)
+
+Processing abstracts OpenGL
+
+Continuous assessment for Computer Graphics module
+Theme is car racing
+
+Scene should contain at a minimum 4 distinct objects
+one static, one scaling, one rotating, and one translating
+
+---
+
 ## CA Bigfoot Monster Truck
 
 <div class="column">
     <div id="star1">
     <canvas id="canvasMain"></canvas>
-    <script src="/scripts/p5.js"></script>
-    <script src="/scripts/CA-Edit.js"></script>
+    <script src="../scripts/p5.js"></script>
+    <script src="../scripts/CA-Edit.js"></script>
     </div>
 </div>
 
@@ -28,4 +41,13 @@ LIT BSc in Games Design, year 3 Computer Graphics module CA converted from Proce
 
 ## Screenshots
 
-![Bigfoot](/images/3DScene.png)
+![Bigfoot](../images/3DScene.png)
+
+## Files:
+
+ No. | File          | Description 
+ --- | ------------- | ------------ 
+ 1   | **Joe_O_Regan_Graphics_CA_K00203642_V2.pde** | Submitted Version
+ 2   | **Joe_O_Regan_Graphics_CA_K00203642_V3.pde** | Tidied Up Version
+ 3   | **joeCAEdit-ProcessingJS.pde**               | ProcessingJS Version 
+ 
