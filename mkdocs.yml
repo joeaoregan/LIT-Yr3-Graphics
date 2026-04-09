@@ -56,7 +56,8 @@ theme:
     - content.code.copy
 
 nav:
-  - Home: 
+  - Home: https://joeaoregan.github.io/
+  - Graphics:
     - Home: index.md
     - External Links:    
       - Linkedin: https://www.linkedin.com/in/joeaoregan/
@@ -89,3 +90,4 @@ repo_url: https://github.com/joeaoregan/LIT-Yr3-Graphics
 repo_name: GitHub
 
 site_url: https://joeaoregan.github.io/LIT-Yr3-Graphics
+site_author: Joe O'Regan
